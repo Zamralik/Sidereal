@@ -1,0 +1,106 @@
+
+trait_extremely_adaptive = {
+	cost = 3
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_robust" "trait_adaptive_lithoid" }
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		pop_environment_tolerance = 0.20
+	}
+	slave_cost = {
+		energy = 1000
+	}
+}
+
+trait_very_strong = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_weak" "trait_strong" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		army_damage_mult = 0.40
+		planet_jobs_worker_produces_mult = 0.05
+	}
+	slave_cost = {
+		energy = 2000
+	}
+}
+
+trait_venerable = {
+	cost = 3
+	potential_crossbreeding_chance = 1.0
+	modifier = { leader_age = 80 }
+	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	slave_cost = {
+		energy = 1000
+	}
+}
+
+trait_fertile = {
+	cost = 3
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_slow_breeders" }
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		pop_growth_speed = 0.3
+		pop_housing_usage_mult = -0.1
+	}
+	slave_cost = {
+		energy = 2000
+	}
+}
+
+trait_robust = {
+	cost = 3
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_extremely_adaptive" "trait_adaptive_lithoid" }
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		pop_environment_tolerance = 0.30
+		planet_jobs_produces_mult = 0.05
+		leader_age = 50
+	}
+	slave_cost = {
+		energy = 2000
+	}
+}
+
+trait_erudite = {
+	cost = 3
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	improves_leaders = yes
+	advanced_trait = yes
+	opposites = { "trait_nerve_stapled" "trait_intelligent" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_researchers_produces_mult = 0.2
+		leader_skill_levels = 1
+	}
+	slave_cost = {
+		energy = 2000
+	}
+}
+
+trait_robot_efficient_processors = {
+	cost = 2
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		#planet_jobs_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.10
+		planet_jobs_alloys_produces_mult = 0.05
+	}
+	slave_cost = {
+		energy = 500
+	}
+}
