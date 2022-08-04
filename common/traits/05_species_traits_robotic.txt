@@ -43,8 +43,7 @@ trait_robot_efficient_processors = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.10
-		planet_jobs_alloys_produces_mult = 0.05
+		planet_jobs_produces_mult = 0.05
 	}
 	slave_cost = {
 		energy = 500
