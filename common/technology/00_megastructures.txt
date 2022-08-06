@@ -720,10 +720,11 @@ tech_dyson_sphere = {
 		}
 		modifier = {
 			factor = 2
-			OR = {
-				is_materialist = yes
-				has_authority = auth_machine_intelligence
-			}
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 2
+			has_authority = auth_machine_intelligence
 		}
 	}
 
@@ -770,6 +771,10 @@ tech_matter_decompressor = {
 		modifier = {
 			factor = 2
 			is_militarist = yes
+		}
+		modifier = {
+			factor = 2
+			has_authority = auth_machine_intelligence
 		}
 	}
 
