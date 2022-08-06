@@ -57,3 +57,122 @@ ap_world_shaper = {
 		}
 	}
 }
+
+####################
+# Galactic Wonders #
+####################
+
+ap_galactic_wonders_utopia = {
+	on_enabled = {
+		custom_tooltip = "add_research_options_galactic_wonders_utopia"
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_technology = tech_ring_world }
+				}
+				add_research_option = tech_ring_world
+			}
+			if = {
+				limit = {
+					NOT = { has_technology = tech_dyson_sphere }
+				}
+				add_research_option = tech_dyson_sphere
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+		custom_tooltip = {
+			fail_text = "requires_built_or_repaired_megastructure"
+			has_country_flag = has_built_or_repaired_megastructure
+		}
+	}
+
+	potential = {
+		always = no
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_galactic_wonders_megacorp = {
+	on_enabled = {
+		if = {
+			limit = {
+				NOT = { has_technology = tech_matter_decompressor }
+			}
+			add_research_option = tech_matter_decompressor
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+		custom_tooltip = {
+			fail_text = "requires_built_or_repaired_megastructure"
+			has_country_flag = has_built_or_repaired_megastructure
+		}
+	}
+
+	potential = {
+		always = no
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_galactic_wonders_utopia_and_megacorp = {
+	on_enabled = {
+		custom_tooltip = "add_research_options_galactic_wonders_utopia_megacorp"
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_technology = tech_ring_world }
+				}
+				add_research_option = tech_ring_world
+			}
+			if = {
+				limit = {
+					NOT = { has_technology = tech_dyson_sphere }
+				}
+				add_research_option = tech_dyson_sphere
+			}
+			if = {
+				limit = {
+					NOT = { has_technology = tech_matter_decompressor }
+				}
+				add_research_option = tech_matter_decompressor
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+		custom_tooltip = {
+			fail_text = "requires_built_or_repaired_megastructure"
+			has_country_flag = has_built_or_repaired_megastructure
+		}
+
+	}
+
+	potential = {
+		always = no
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
