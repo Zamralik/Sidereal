@@ -32,14 +32,23 @@ d_nanites_deposit = {
 	is_for_colonizable = no
 
 	potential = {
-		solar_system = { has_star_flag = lcluster }
 		is_star = no
 		is_colonizable = no
-		is_planet_class = pc_gray_goo
 		NOT = { has_modifier = terraforming_candidate }
+		OR = {
+			is_planet_class = pc_gray_goo
+			is_planet_class = pc_frozen
+			is_planet_class = pc_barren
+			is_planet_class = pc_barren_cold
+			is_planet_class = pc_broken
+		}
 	}
 
 	drop_weight = {
-		weight = 100
+		weight = 1
+		modifier = {
+			factor = 100
+			is_planet_class = pc_gray_goo
+		}
 	}
 }
